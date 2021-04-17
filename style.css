@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #333;
+  max-width: 1366px;
+  animation: bgc 3s 9.5s linear both;
+}
+
+h1 {
+  position: relative;
+  margin: 10vh 0 10vh 0;
+  text-align: center;
+  font-family: monospace;
+  overflow: hidden;
+  color: #fff;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  height: 100%;
+  width: 100%;
+  border-left: 2px solid #ddd;
+  background-color: #333;
+  animation: writing 9s steps(76, start) forwards 1, flash 1s linear infinite,
+    bgc 3s 9.5s linear both;
+}
+
+div {
+  background-image: url(bubble.png);
+  margin: 0 auto;
+  width: 380px;
+  height: 380px;
+  animation: bubble 1.2s 11s steps(8, end) forwards 1,
+    appear 11s linear forwards 1, disappear 3s 13s linear forwards 1;
+}
+
+@keyframes writing {
+  100% {
+    left: 93%;
+  }
+}
+
+@keyframes flash {
+  40% {
+    border-color: #ddd;
+  }
+
+  60% {
+    border-color: #ddd;
+  }
+
+  80% {
+    border-color: transparent;
+  }
+
+  90% {
+    border-color: transparent;
+  }
+
+  95% {
+    border-color: #ddd;
+  }
+
+  100% {
+    border-color: #ddd;
+  }
+}
+
+@keyframes bubble {
+  100% {
+    background-position: -3046px 0;
+  }
+}
+
+@keyframes bgc {
+  1% {
+    background-color: #08020e;
+  }
+
+  2% {
+    background-color: #08020e;
+  }
+
+  3% {
+    background-color: #08020e;
+  }
+
+  5% {
+    background-color: #08020e;
+  }
+  7% {
+    background-color: #08020e;
+  }
+
+  10% {
+    background-color: #08020e;
+  }
+
+  15% {
+    background-color: #08020e;
+  }
+
+  20% {
+    background-color: #08020e;
+  }
+
+  25% {
+    background-color: #08020e;
+  }
+
+  35% {
+    background-color: #08020e;
+  }
+
+  45% {
+    background-color: #08020e;
+  }
+
+  50% {
+    background-color: #08020e;
+  }
+
+  55% {
+    background-color: #08020e;
+  }
+
+  65% {
+    background-color: #08020e;
+  }
+
+  90% {
+    background-color: #000001;
+  }
+
+  100% {
+    background-color: #000001;
+  }
+}
+
+@keyframes disappear {
+  0% {
+    opacity: 1;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  20% {
+    opacity: 0.8;
+  }
+
+  30% {
+    opacity: 0.7;
+  }
+
+  40% {
+    opacity: 0.6;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  60% {
+    opacity: 0.4;
+  }
+
+  70% {
+    opacity: 0.3;
+  }
+
+  80% {
+    opacity: 0.2;
+  }
+
+  90% {
+    opacity: 0.1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 0;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  80% {
+    opacity: 0;
+  }
+
+  85% {
+    opacity: 0;
+  }
+
+  86% {
+    opacity: 0;
+  }
+
+  87% {
+    opacity: 0;
+  }
+
+  88% {
+    opacity: 0;
+  }
+
+  89% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  91% {
+    opacity: 0.1;
+  }
+
+  92% {
+    opacity: 0.2;
+  }
+
+  93% {
+    opacity: 0.3;
+  }
+
+  94% {
+    opacity: 0.4;
+  }
+
+  95% {
+    opacity: 0.5;
+  }
+
+  96% {
+    opacity: 0.6;
+  }
+
+  97% {
+    opacity: 0.7;
+  }
+
+  98% {
+    opacity: 0.8;
+  }
+
+  99% {
+    opacity: 0.9;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
