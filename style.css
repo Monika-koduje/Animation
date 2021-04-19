@@ -6,7 +6,9 @@
 body {
   background-color: #333;
   max-width: 1366px;
-  animation: bgc 3s 9.5s linear both;
+  overflow: hidden;
+  animation: bgc 3s 9.5s linear both, bgc_2 3s 23s linear both,
+    bgc_3 3s 43s linear both;
 }
 
 h1 {
@@ -16,6 +18,8 @@ h1 {
   font-family: monospace;
   overflow: hidden;
   color: #fff;
+  animation: bgc 3s 9.5s linear both, bgc_2 3s 23s linear both,
+    bgc_3 3s 43s linear both;
 }
 
 h1::before {
@@ -25,19 +29,65 @@ h1::before {
   left: 5%;
   height: 100%;
   width: 100%;
-  border-left: 2px solid #ddd;
+  border-left: 2px solid #bbb;
   background-color: #333;
   animation: writing 9s steps(76, start) forwards 1, flash 1s linear infinite,
-    bgc 3s 9.5s linear both;
+    bgc 3s 9.5s linear both, bgc_2 3s 23s linear both,
+    writing_back 7s 35s steps(76, start) forwards 1, bgc_3 3s 43s linear both;
 }
 
 div {
-  background-image: url(bubble.png);
-  margin: 0 auto;
-  width: 380px;
-  height: 380px;
-  animation: bubble 1.2s 11s steps(8, end) forwards 1,
-    appear 11s linear forwards 1, disappear 3s 13s linear forwards 1;
+  position: absolute;
+}
+
+div.image_1 {
+  top: 20%;
+  left: -100%;
+  background-image: url(bird.png);
+  width: 351px;
+  height: 320px;
+  animation: run 1.3s steps(9, start) infinite, run_1 20s 4s infinite linear,
+    disappear 5s 25s linear forwards 1;
+}
+
+div.image_2 {
+  top: 45%;
+  left: 10%;
+  background-image: url(dandelion_girl.png);
+  width: 300px;
+  height: 316px;
+  animation: appear 22s linear forwards 1, disappear 5s 28s linear forwards 1;
+}
+
+div.image_3 {
+  top: 17%;
+  left: 18%;
+  background-image: url(dandelion2.png);
+  width: 967px;
+  height: 376px;
+  transform: rotate(184deg);
+  animation: appear 26s linear forwards 1, run_1 7s 26s linear forwards 1;
+}
+
+div.image_4 {
+  top: 2%;
+  left: 110%;
+  background-image: url(dandelion1.png);
+  width: 200px;
+  height: 163px;
+  transform: rotate(26deg);
+  animation: appear 35s linear forwards 1, run_2 12s 34s linear forwards 1;
+}
+
+div.image_5 {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-image: url(dandelion1.png);
+  width: 200px;
+  height: 163px;
+  animation: appear 50s linear forwards 1;
+  cursor: pointer;
 }
 
 @keyframes writing {
@@ -46,13 +96,19 @@ div {
   }
 }
 
+@keyframes writing_back {
+  100% {
+    left: 5%;
+  }
+}
+
 @keyframes flash {
   40% {
-    border-color: #ddd;
+    border-color: #bbb;
   }
 
   60% {
-    border-color: #ddd;
+    border-color: #bbb;
   }
 
   80% {
@@ -64,82 +120,60 @@ div {
   }
 
   95% {
-    border-color: #ddd;
+    border-color: #bbb;
   }
 
   100% {
-    border-color: #ddd;
+    border-color: #bbb;
   }
 }
 
-@keyframes bubble {
+@keyframes run {
   100% {
-    background-position: -3046px 0;
+    background-position: -3160px 0;
+  }
+}
+
+@keyframes run_1 {
+  100% {
+    left: 150%;
+  }
+}
+
+@keyframes run_2 {
+  100% {
+    left: -150%;
   }
 }
 
 @keyframes bgc {
   1% {
-    background-color: #08020e;
-  }
-
-  2% {
-    background-color: #08020e;
-  }
-
-  3% {
-    background-color: #08020e;
-  }
-
-  5% {
-    background-color: #08020e;
-  }
-  7% {
-    background-color: #08020e;
-  }
-
-  10% {
-    background-color: #08020e;
-  }
-
-  15% {
-    background-color: #08020e;
-  }
-
-  20% {
-    background-color: #08020e;
-  }
-
-  25% {
-    background-color: #08020e;
-  }
-
-  35% {
-    background-color: #08020e;
-  }
-
-  45% {
-    background-color: #08020e;
-  }
-
-  50% {
-    background-color: #08020e;
-  }
-
-  55% {
-    background-color: #08020e;
-  }
-
-  65% {
-    background-color: #08020e;
-  }
-
-  90% {
-    background-color: #000001;
+    background-color: #fff;
+    color: #333;
   }
 
   100% {
-    background-color: #000001;
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+@keyframes bgc_2 {
+  1% {
+    background-color: rgb(128, 26, 26);
+    color: #fff;
+  }
+
+  100% {
+    background-color: rgb(128, 26, 26);
+    color: #fff;
+  }
+}
+
+@keyframes bgc_3 {
+  100% {
+    background-color: #fff;
+    border-left: 2px solid #fff;
   }
 }
 
