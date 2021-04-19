@@ -6,5 +6,4 @@ Project is created with:
 * HTML5
 
 Sources: 
-Images designed by upklyak / Freepik -> http://www.freepik.com 
-
+Images https://www.pngitem.com
