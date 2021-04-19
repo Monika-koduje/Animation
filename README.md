@@ -5,5 +5,4 @@ Project is created with:
 * CSS3
 * HTML5
 
-Sources: 
-Images https://www.pngitem.com
+Images source: https://www.pngitem.com
