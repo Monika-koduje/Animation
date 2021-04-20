@@ -46,7 +46,7 @@ div.image_1 {
   background-image: url(bird.png);
   width: 351px;
   height: 320px;
-  animation: run 1.3s steps(9, start) infinite, run_1 10s 4s infinite linear,
+  animation: run 1.3s steps(9, start) infinite, run_1 15s 4s infinite linear,
     disappear 5s 25s linear forwards 1;
 }
 
