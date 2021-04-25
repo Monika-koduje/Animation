@@ -324,3 +324,33 @@ div.image_5 {
     opacity: 1;
   }
 }
+
+@media (max-width: 800px) and (orientation: landscape) {
+  h1 {
+    font-size: 3vh;
+  }
+
+  div.image_2,
+  div.image_3,
+  div.image_4 {
+    background-repeat: no-repeat;
+    background-size: 50%;
+  }
+
+  div.image_1 {
+    width: calc(1264px / 9);
+    height: 128px;
+    background-image: url(./bird_2.png);
+  }
+
+  div.image_3 {
+    background-position: bottom right;
+  }
+
+  @keyframes run {
+    100% {
+      background-position: -1264px 0;
+    }
+  }
+}
+
