@@ -354,3 +354,36 @@ div.image_5 {
   }
 }
 
+@media (max-width: 400px) and (orientation: portrait) {
+  h1 {
+    font-size: 1vh;
+  }
+
+  div.image_2,
+  div.image_3,
+  div.image_4 {
+    background-repeat: no-repeat;
+    background-size: 30%;
+  }
+
+  div.image_1 {
+    width: calc(950px / 9);
+    height: 96px;
+    background-image: url(bird_1.png);
+  }
+
+  div.image_3 {
+    background-position: top 150px right 30px;
+  }
+
+  div.image_4 {
+    top: 10%;
+  }
+
+  @keyframes run {
+    100% {
+      background-position: -950px 0;
+    }
+  }
+}
+
