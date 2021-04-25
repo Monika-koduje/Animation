@@ -340,7 +340,7 @@ div.image_5 {
   div.image_1 {
     width: calc(1264px / 9);
     height: 128px;
-    background-image: url(./bird_2.png);
+    background-image: url(bird_2.png);
   }
 
   div.image_3 {
