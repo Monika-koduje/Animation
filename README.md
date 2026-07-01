@@ -1,7 +1,6 @@
 # Animation
 
-## Technologies
-Project is created with:
+## Technology Stuck:
 * CSS3
 * HTML5
 
