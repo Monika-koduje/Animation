@@ -3,7 +3,7 @@
 ## Live Demo:
 [Try the app here](https://monika-koduje.github.io/Animation/)
 
-## Technology Stuck:
+## Technology Stack:
     CSS3
     HTML5
 
